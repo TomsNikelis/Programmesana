@@ -119,3 +119,23 @@ section h5 {
 button:hover {
     pointer-events:none;
 }
+
+/*Lietotaja login izveide */
+
+.login-box-container {
+    background: lightblue;
+    display: flex;
+    height: 60rem;
+    width: 90rem;
+}
+
+.lk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poga {
+    margin-top: 2rem;
+    margin-left: 4rem;
+}
