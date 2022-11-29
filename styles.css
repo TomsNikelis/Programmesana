@@ -107,3 +107,14 @@ section h5 {
     text-align: center;
     margin-top: 3rem;
 }
+
+.signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+button:hover {
+    pointer-events:none;
+}
