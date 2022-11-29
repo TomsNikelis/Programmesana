@@ -48,7 +48,7 @@ section{
     padding:2rem 9%;
 }
 
-/*HTML stila vērtības*/
+/*Header un navbar izveide*/
 
 header {
     position: fixed;
@@ -77,4 +77,33 @@ li {
 li button{
     font-size: 2.3rem;
     margin-left: 2rem;
+}
+
+/*Sakuma, jeb iepazisanas sekcijas izveide */
+
+section {
+    background: darkblue;
+    height: 45rem;
+    width: 100%;
+}
+
+section h1 {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+section h4 {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-top: 15rem;
+}
+
+section h5 {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    margin-top: 3rem;
 }
