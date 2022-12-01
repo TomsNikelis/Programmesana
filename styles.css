@@ -258,3 +258,30 @@ button{
 .login_body {
     background-color: black;
 }
+
+/*lietotajs.html*/
+
+.parent {
+    border: solid 1px red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12rem;
+}
+
+.box {
+    display: flex;
+    width:100rem;
+    height: 50rem;
+    margin: 1rem;
+    margin-right: 12=rem;
+    margin-left: 12=rem;
+    border: 0.3rem solid black;
+    justify-content: center;
+    box-shadow: #080710;
+}
+
+.uzraksts {
+    color: beige;
+    font-size: 2rem;
+}
