@@ -1,0 +1,118 @@
+/*CSS stila default vērtību iestatīšana*/
+
+:root{
+    --main-color:#6e8ae8;
+    --black:#555;
+    --light-color:#777;
+    --bg:#e9f3fc;
+    --border:.1rem solid rgba(0,0,0,.1);
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border:none;
+    text-decoration: none;
+    transition: all .3s ease-out;
+    background-color: darkblue;
+}
+
+*::selection{
+    background:var(--main-color);
+    color:#fff;
+}
+
+html{
+    font-size: 62%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+
+
+html::-webkit-scrollbar{
+    width:1.3rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--light-color);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+}
+
+section{
+    padding:2rem 9%;
+}
+
+/*Header un navbar izveide*/
+
+h3 {
+    color: wheat;
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    
+}
+
+hr {
+    border-top: 0.5rem dashed blanchedalmond;
+    margin-top: 1rem;
+}
+
+.box h4 {
+    font-size: 2rem;
+    color: beige;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.box h3 {
+    border: 0.5rem solid black;
+    border-radius: 0.5rem;
+    font-size: 5rem;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2rem;
+    color: beige;
+    font-size: 3rem;
+    text-decoration: underline;
+}
+
+.box1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.parent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.box1 h4 {
+    color: beige;
+    font-size: 2rem;
+
+}
+
+button {
+    font-size: 2rem;
+    color: red;
+    border: 0.3rem black solid;
+}
