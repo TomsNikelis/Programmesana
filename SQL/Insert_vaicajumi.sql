@@ -66,8 +66,45 @@ INSERT INTO `problema` (`problema_id`, `apraksts`, `status`, `id_lietotajs`, `id
 (NULL, 'Viens no mūsu darbiniekiem izdzēsa ļoti svarīgus failus, vai ir iespēja tos atgūt?', 'Pabeigts', '4', '5'), 
 (NULL, 'Mūsu uzņēmums ir nepieciešama aplikācija, līdzīga watsapp, lai mēs varētu savsarpēji sazināties ar darbiniekiem.', 'Pabeigts', '2', '4');
 
-/*Tabulas 'grupas' insert vaicajumu ievadisana*/
+/*Tabulas 'premijas' insert vaicajumu ievadisana*/
 
+INSERT INTO `premijas` (`premijas_id`, `premija`, `status`, `id_darbinieki`) VALUES 
+(NULL, '200', 'Izdota', '6'), 
+(NULL, '400', 'Izdota', '7'), 
+(NULL, '300', 'Izdota', '3'), 
+(NULL, '800', 'Nav izdota', '8'), 
+(NULL, '50', 'Izdota', '1'), 
+(NULL, '80', 'Izdota', '2'), 
+(NULL, '70', 'Izdota', '3'), 
+(NULL, '140', 'Nav izdota', '8'), 
+(NULL, '144', 'Izdota', '2'),
+(NULL, '20', 'Nav izdota', '4'), 
+(NULL, '90', 'Izdota', '4'), 
+(NULL, '40', 'Nav izdota', '8'), 
+(NULL, '40', 'Nav izdota', '5'), 
+(NULL, '200', 'Izdota', '5'), 
+(NULL, '150', 'Izdota', '6'), 
+(NULL, '30', 'Nav izdota', '3'), 
+(NULL, '40', 'Izdota', '9'), 
+(NULL, '70', 'Izdota', '4');
 
+/*Tabulas 'atvalinajumi' insert vaicajumu ievadisana*/
 
-/*Tabulas 'grupas' insert vaicajumu ievadisana*/
+INSERT INTO `atvalinajumi` (`atvalinajumi_id`, `sakuma_datums`, `beigu_datums`, `atmaksats`, `id_darbinieki`) VALUES 
+(NULL, '2022-11-14', '2022-12-01', 'Ne', '6'), 
+(NULL, '2022-09-13', '2022-10-06', 'Ne', '4'), 
+(NULL, '2022-09-12', '2022-11-14', 'Ja', '4'), 
+(NULL, '2019-02-06', '2020-09-08', 'Ne', '1'), 
+(NULL, '2022-10-04', '2022-11-16', 'Ja', '5'), 
+(NULL, '2020-11-10', '2020-12-01', 'Ja', '4'), 
+(NULL, '2022-08-15', '2022-10-10', 'Ja', '3'), 
+(NULL, '2022-07-11', '2022-09-12', 'Ne', '2'), 
+(NULL, '2022-03-14', '2022-04-20', 'Ne', '7'), 
+(NULL, '2022-11-01', '2022-11-08', 'Ne', '1'), 
+(NULL, '2022-11-07', '2022-11-14', 'Ja', '2'), 
+(NULL, '2022-10-02', '2022-10-16', 'Ne', '4'), 
+(NULL, '2022-08-08', '2022-09-13', 'Ne', '8'), 
+(NULL, '2022-07-08', '2022-10-13', 'Ne', '9'), 
+(NULL, '2022-11-23', '2022-11-30', 'Ne', '8'), 
+(NULL, '2022-11-03', '2022-11-08', 'Ja', '4'), 
+(NULL, '2022-11-16', '2022-11-22', 'Ja', '3');
