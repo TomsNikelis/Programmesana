@@ -49,9 +49,22 @@ INSERT INTO `administracija` (`administracija_id`, `lietotajvards`, `parole`, `e
 (NULL, 'Niklavs', 'NiklavsA1', 'niklavsa@itatbalsts.com', '7'), 
 (NULL, 'Kristers', 'KristersA1', 'kristersa@itatbalsts.com', '9');
 
-/*Tabulas 'grupas' insert vaicajumu ievadisana*/
+/*Tabulas 'problema' insert vaicajumu ievadisana*/
 
-
+INSERT INTO `problema` (`problema_id`, `apraksts`, `status`, `id_lietotajs`, `id_darbinieki`) VALUES 
+(NULL, 'Es nevaru nekur pieteikties, visur rādās, ka ir nepareizas paroles!', 'Pabeigts', '2', '4'), 
+(NULL, 'Ieslēdzot datoru, man rādās zils ekrāns un pēc dažām sekundēm dators pats izslēdzas.', 'Pabeigts', '10', '4'), 
+(NULL, 'Mūsu uzņēmumā ir ļoti slikta interneta drošība, ir vajadzīga paroļu uzlikšana un drošības draudu noteikšana.', 'Pabeigts', '1', '5'), 
+(NULL, 'Man ir vajadzīga mājaslapas izstrāde manam topošajam restorānam iekš, kuras parādīs mūsu ēdienkarti un kontaktinformāciju.', 'Pabeigts', '5', '7'), 
+(NULL, 'Mūsu uzņēmumā pārāk daudz darbiniekiem ir piekļuves sensitīviem datiem un informācijai, mums ir vajadzīgi serveri un datubāzes, lai tikai konkrēti darbinieki var piekļut konkrētām lietām un informācijai.', 'Pabeigts', '5', '7'), 
+(NULL, 'Man datoram neiet internets, lai gan rādās, ka vads ir iesprausts.', 'Pabeigts', '5', '3'), 
+(NULL, 'Manam biznesam ir ļoti daudz svarīgu datu un tapēc man ir nepieciešams backup serveru izveide.', 'Nav pabeigts', '4', '9'), 
+(NULL, 'Man ir nepieciešama logo izstrāde priekš mana kafijas veikala.', 'Nav pabeigts', '5', '8'), 
+(NULL, 'Nepieciešama grafiskā palīdzība, lai uzlabotu esošo logo priekš mana uzņēmuma.', 'Nav pabeigts', '4', '8'), 
+(NULL, 'Ir vajadzīga ātra mājas lapas izveide priekš mana uzņēmuma.', 'Nav pabeigts', '3', '3'), 
+(NULL, 'Man ir tāda aizdoma, ka manam datoram ir vīrus. Vai ir iespēja to noņemt un pie reizes iztīrīt datoru no putekļiem?', 'Nav pabeigts', '3', '1'), 
+(NULL, 'Viens no mūsu darbiniekiem izdzēsa ļoti svarīgus failus, vai ir iespēja tos atgūt?', 'Pabeigts', '4', '5'), 
+(NULL, 'Mūsu uzņēmums ir nepieciešama aplikācija, līdzīga watsapp, lai mēs varētu savsarpēji sazināties ar darbiniekiem.', 'Pabeigts', '2', '4');
 
 /*Tabulas 'grupas' insert vaicajumu ievadisana*/
 
