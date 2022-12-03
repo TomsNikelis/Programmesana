@@ -40,9 +40,14 @@ INSERT INTO `darbinieki` (`darbinieki_id`, `vards`, `uzvards`, `epasts`, `telefo
 (NULL, 'Toms', 'Pavils', 'tomspavils@mail.com', '27765444', '1200', 'Katolu, bld. 33', '6'), 
 (NULL, 'Kristers', 'Lapa', 'kristerslapa@mail.com', '28854312', '800', 'Virsu, bld. 4', '1');
 
-/*Tabulas 'grupas' insert vaicajumu ievadisana*/
+/*Tabulas 'administracija' insert vaicajumu ievadisana*/
 
-
+INSERT INTO `administracija` (`administracija_id`, `lietotajvards`, `parole`, `epasts`, `darbinieki_id`) VALUES 
+(NULL, 'Toms', 'Parole1', 'toms@itatbalsts.com', '8'), 
+(NULL, 'Uldis', 'UldisA1', 'uldisa@itatbalsts.com', '1'), 
+(NULL, 'Sofia', 'SofiaA1', 'sofiaa@itatbalsts.com', '5'), 
+(NULL, 'Niklavs', 'NiklavsA1', 'niklavsa@itatbalsts.com', '7'), 
+(NULL, 'Kristers', 'KristersA1', 'kristersa@itatbalsts.com', '9');
 
 /*Tabulas 'grupas' insert vaicajumu ievadisana*/
 
