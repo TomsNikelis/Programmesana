@@ -1,4 +1,4 @@
-/*Pirmas view vaicājums, attēlos informāciju kurā tiks prēmiju izmaksas status: 'Izdota' vai 'Nav izdota'. 
+/*Pirmas view vaicājums, attēlos informāciju kurā tiks parādīts prēmiju izmaksas status: 'Izdota' vai 'Nav izdota'. 
 Šis view palīdzēs, lai parādītu tos darbiniekus, kuru prēmijas vēl nav tikušas izmaksātas.*/
 
 CREATE VIEW Neizmaksatas_premijas AS
@@ -22,5 +22,16 @@ darbinieki.darbinieki_id = atvalinajumi.id_darbinieki
 GROUP BY darbinieki.vards
 ORDER BY count(atvalinajumi_id) DESC;
 
-/*Pirmas view vaicājums, attēlos informāciju kurā tiks prēmiju izmaksas status: 'Izdota' vai 'Nav izdota'. 
-Šis view palīdzēs, lai parādītu tos darbiniekus, kuru prēmijas vēl nav tikušas izmaksātas.*/
+/*Trešais view vaicājums, attēlos informāciju kurā tiks parādītas tās problēmas, kurās vēl nav tikušas izdarītas ar statusu: 'Nav pabeigts'.
+Kā arī tiks parādīts lietotājs, kurš iesniedzis šo problēmu un darbinieks, kam šī problēma ir jāizdara un abu kontaktinfromācija.*/
+
+CREATE VIEW Atvalinajumu_skaits AS
+
+SELECT darbinieki.uzvards AS 'Darbinieka uzvārds', darbinieki.telefons AS 'Darbinieka telefons', lietotajs.uzvards AS 'Problēmas iesniedzējs', lietotajs.telefons AS 'Problēmas sniedzēja telefons', problema.apraksts, problema.status
+FROM darbinieki
+INNER JOIN problema ON
+darbinieki.darbinieki_id = problema.id_darbinieki
+INNER JOIN lietotajs ON
+lietotajs.lietotajs_id = problema.id_lietotajs
+WHERE problema.status = 'Nav pabeigts';
+
