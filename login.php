@@ -38,9 +38,10 @@
 							while($row = mysqli_fetch_array($rezultats)) {
 								if(password_verify($parole, $row["parole"]) || ($parole == $row["parole"])) {
 									$_SESSION["username"] = $lietotaja_vards;
+                                    $_SESSION["id"] = $row["lietotajs_id"];
 									header("location:lietotajs.php");
 								} else {
-									echo $row["parole"];
+									echo "Nepareizs lietotāja vārds vai parole!";
 								} 
 							}
 						} else {

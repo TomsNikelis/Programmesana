@@ -7,6 +7,15 @@
     margin-top: 15rem;
 }
 
+#aizliegts {
+    border: 0.5rem solid darkred;
+    margin-top: 5rem;
+    justify-content: center;
+    height: 5rem;
+    width: 5rem;
+    font-size: 20rem;
+}
+
 
 
 .parent {
