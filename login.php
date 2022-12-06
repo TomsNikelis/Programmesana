@@ -38,7 +38,7 @@
 							while($row = mysqli_fetch_array($rezultats)) {
 								if(password_verify($parole, $row["parole"]) || ($parole == $row["parole"])) {
 									$_SESSION["username"] = $lietotaja_vards;
-									header("location:index.php");
+									header("location:lietotajs.php");
 								} else {
 									echo $row["parole"];
 								} 

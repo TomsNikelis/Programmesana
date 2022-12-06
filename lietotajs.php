@@ -23,10 +23,21 @@
         </div>
     </header>
     
+    <?php
+    $page = "sakums";
+
+    require("connect.php");
+
+    session_start();
+
+    if($_SESSION['username']) {
+
+    
+    ?>
     
     <section>
     <div id="raksts">
-        <p>Sveicināts <?php session_start(); echo $_SESSION['username']; ?></p>
+        <p>Sveicināts <?php echo $_SESSION['username']; ?></p>
     </div>
     </section>
 
@@ -75,6 +86,15 @@
             
         </div>
     </section>
+
+    <?php
+
+    } else {
+        echo "<div class = 'pazinojums sarkans'>Tev nav peejas</div>";
+        header('Refresh: 1; url=index.php');
+    }
+
+?>
     
 </body>
 </html>
