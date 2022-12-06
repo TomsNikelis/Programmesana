@@ -16,7 +16,59 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form>
+    
+
+
+    <?php
+
+        require ("connect.php");
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+        if (isset($_POST['gatavs'])) {
+            $vards_ievade = $_POST['vards'];
+            $uzvards_ievade = $_POST['uzvards'];
+            $epasts_ievade = $_POST['epasts'];
+            $parole_ievade = $_POST['parole'];
+            $atkartota_parole__ievade = $_POST['atkartota_parole'];
+            $telefons_ievade = $_POST['telefons'];
+            $adrese_ievade = $_POST['adrese'];
+
+            $parbaude = "SELECT * FROM lietotajs WHERE epasts = '$epasts_ievade'";
+
+            $parbaudes_rezultats = mysqli_query($savienojums, $parbaude) or die("Nekorekts vaicajums!");
+
+            if(mysqli_num_rows($parbaudes_rezultats) >=1 ) {
+                echo "<div class = 'pazinojums sarkans'>Kluda! Tāds ē-pasts jau pastāv!</div>";
+            } else {
+                if(!empty($vards_ievade) && !empty($uzvards_ievade) && !empty($epasts_ievade) && !empty($parole_ievade) && 
+                !empty($atkartota_parole_ievade) && ($parole_ievade == $atkartota_parole__ievade)) {
+                    $registret_lietotaju_SQL = "INSERT INTO lietotajs(vards, uzvards, parole, epasts, telefons, dzim_datums, adrese)
+                    VALUES ('$vards_ievade', '$uzvards_ievade', '$parole_ievade', '$epasts_ievade', '$telefons_ievade', '1997-11-11',
+                    '$adrese_ievade')";
+
+                    if(mysqli_query($savienojums, $registret_lietotaju_SQL)) {
+                        echo "<div class = 'pazinojums zals'>Apsveicu! Esat reģistrējies veiksmīgi!</div>";
+                    } else {
+                        echo "<div class = 'pazinojums sarkans'>Radās kļūda! Reģistrācija neizdevās, kļūda sistēmā!</div>";
+                    }
+
+                } else {
+                    echo "<div class = 'pazinojums sarkans'>Reģistrācija nav izdevusies! Ievades lauku problēmas!</div>";
+                }
+            }
+
+
+        }
+    } else {
+        echo " <div class = 'pazinojums sarkans'> Kaut kas nogaja greizi, atgriezies 
+        sakuma lapa un meigini velreiz </div>";
+        header("Refresh:2; url=index.php");
+
+    }
+
+    ?>
+        <form method="post">
         <h3>Reģistrēties</h3>
 
         <label for="username">Username</label>

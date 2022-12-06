@@ -11,7 +11,7 @@ $parole, $db_vards);
 if(!$savienojums) {
     die("Pieslegties neizdevas: ".mysqli_connect_error());
 } else {
-    echo "Savienojums ar datu bazi ir veiksmigi izveidots!";
+    #echo "Savienojums ar datu bazi ir veiksmigi izveidots!";
 }
 
 ?>
