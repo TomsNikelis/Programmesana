@@ -325,3 +325,12 @@ h5 {
     background-color: black;
     margin-top: 1rem;
 }
+
+#idas .virsraksts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-top: 4rem;
+    color: white;
+}

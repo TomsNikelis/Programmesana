@@ -1,3 +1,8 @@
+div #raksts p {
+    font-size: 20rem !important;
+    color: beiges;
+}
+
 .parent {
     border: solid 1px red;
     display: flex;
@@ -249,3 +254,4 @@ section h5 {
 .form-style-6 input[type="button"]:hover{
 	background: #2EBC99;
 }
+

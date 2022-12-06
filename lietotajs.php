@@ -21,6 +21,9 @@
             </li>
         </div>
     </header>
+    
+    
+    
 
     <section>
         <div class="parent">
@@ -67,5 +70,8 @@
             
         </div>
     </section>
+    <div id="raksts">
+        <p>Sveicināts lietotāj!</p>
+    </div>
 </body>
 </html>
