@@ -16,6 +16,13 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
+
+    <?php
+
+        require ("connect.php");
+
+    ?>
+
     <form>
         <h3>Pieslēgties</h3>
 
@@ -31,6 +38,6 @@
           <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
         </div>
     </form>
-
+    
 </body>
 </html>
