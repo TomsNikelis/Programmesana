@@ -24,9 +24,13 @@
     </header>
     
     
-    
-
     <section>
+    <div id="raksts">
+        <p>Sveicināts <?php session_start(); echo $_SESSION['username']; ?></p>
+    </div>
+    </section>
+
+    <section class="sekcija">
         <div class="parent">
             <div class="box">
                 <h3 class="uzraksts">Pieteikties palidzibai</h3>
@@ -71,8 +75,6 @@
             
         </div>
     </section>
-    <div id="raksts">
-        <p>Sveicināts lietotāj!</p>
-    </div>
+    
 </body>
 </html>

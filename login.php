@@ -17,22 +17,53 @@
         <div class="shape"></div>
     </div>
 
-    <?php
-
-        require ("connect.php");
-
-    ?>
-
-    <form>
+    <form method="post">
         <h3>Pieslēgties</h3>
 
-        <label for="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username">
+        <?php
 
-        <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password">
+					if (isset($_POST['autorizeties'])) {
+						require ("connect.php");
+						session_start();
+						$lietotaja_vards = mysqli_real_escape_string($savienojums, $_POST['vards']);
+						$parole = mysqli_real_escape_string($savienojums, $_POST['parole']);
 
-        <button>Pieslēgties</button>
+						$sqlVaicajums = "SELECT * FROM lietotajs WHERE vards = '$lietotaja_vards'";
+						$rezultats = mysqli_query($savienojums, $sqlVaicajums);
+
+                        echo "$parole";
+
+
+						if(mysqli_num_rows($rezultats) == 1) {
+							while($row = mysqli_fetch_array($rezultats)) {
+								if(password_verify($parole, $row["parole"]) || ($parole == $row["parole"])) {
+									$_SESSION["username"] = $lietotaja_vards;
+									header("location:index.php");
+								} else {
+									echo $row["parole"];
+								} 
+							}
+						} else {
+							echo "Nepareizs lietotaja vards vai parosssle!";
+						}
+
+
+
+					}
+
+					if(isset($GET['logout'])) {
+						session_destroy();
+					}
+
+				?>
+
+        <label for="username">Vards</label>
+        <input type="text" placeholder="Vards" id="username" name="vards">
+
+        <label for="password">Parole</label>
+        <input type="password" placeholder="Parole" id="password" name="parole">
+
+        <button name="autorizeties">Pieslēgties</button>
         <div class="social">
           <div class="go"><i class="fab fa-google"></i>  Google</div>
           <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>

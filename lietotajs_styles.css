@@ -1,5 +1,263 @@
-div #raksts p {
-    font-size: 20rem !important;
-    color: beiges;
+#raksts {
+    color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    margin-top: 15rem;
+}
+
+
+
+.parent {
+    border: solid 1px red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 12rem;
+    width: 100%;
+}
+
+.box {
+    text-align: center;
+    width:60rem;
+    height: 50rem;
+    margin: 1rem;
+    justify-content: center;
+    border: 0.3rem solid black;
+    box-shadow: #080710;
+}
+
+.uzraksts {
+    color: beige;
+    font-size: 2rem;
+}
+
+.inner {
+    
+    height: 5rem;
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h5 {
+    color: pink;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.inner p {
+    color: beige;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 4rem;
+}
+
+.linija {
+    width: 100%;
+    height: 0.5rem;
+    color: black;
+    background-color: black;
+    margin-top: 1rem;
+}
+
+.linija2 {
+    width: 100%;
+    height: 0.2rem;
+    color: black;
+    background-color: black;
+    margin-top: 1rem;
+}
+
+:root{
+    --main-color:#6e8ae8;
+    --black:#555;
+    --light-color:#777;
+    --bg:#e9f3fc;
+    --border:.1rem solid rgba(0,0,0,.1);
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border:none;
+    text-decoration: none;
+    transition: all .3s ease-out;
+    background-color: darkblue;
+}
+
+*::selection{
+    background:var(--main-color);
+    color:#fff;
+}
+
+html{
+    font-size: 62%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+
+
+html::-webkit-scrollbar{
+    width:1.3rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--light-color);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+}
+
+section{
+    padding:2rem 9%;
+}
+
+/*Header un navbar izveide*/
+
+header {
+    position: fixed;
+    background: rgb(1, 1, 34);
+    height: 9rem;
+    width: 100%;
+    color: #e9f3fc;
+}
+
+.logo {
+    display: flex;
+    float: left;
+    margin-top: 3rem;
+    margin-left: 4rem;
+   
+}
+
+li {
+    float: right;
+    display: flex;
+    gap: 5rem;
+    margin-top: 3rem;
+    margin-right: 2rem;
+    font-size: 2rem;
+}
+li button{
+    font-size: 2.3rem;
+    margin-left: 2rem;
+    margin-right: 4rem;
+}
+
+/*Sakuma, jeb iepazisanas sekcijas izveide */
+
+.sekcija {
+    background: darkblue;
+    height: 45rem;
+    width: 100%;
+}
+
+.sekcija h1 {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.sekcija h4 {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-top: 15rem;
+}
+
+.sekcija h5 {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.form-style-6{
+	font: 95% Arial, Helvetica, sans-serif;
+    width: 100%;
+	margin: 10px auto;
+	padding: 16px;
+	background: #F7F7F7;
+}
+.form-style-6 h1{
+	background: #43D1AF;
+	padding: 20px 0;
+	font-size: 140%;
+	font-weight: 300;
+	text-align: center;
+	color: #fff;
+	margin: -16px -16px 16px -16px;
+}
+.form-style-6 input[type="text"],
+.form-style-6 input[type="date"],
+.form-style-6 input[type="datetime"],
+.form-style-6 input[type="email"],
+.form-style-6 input[type="number"],
+.form-style-6 input[type="search"],
+.form-style-6 input[type="time"],
+.form-style-6 input[type="url"],
+.form-style-6 textarea,
+.form-style-6 select 
+{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+.form-style-6 input[type="text"]:focus,
+.form-style-6 input[type="date"]:focus,
+.form-style-6 input[type="datetime"]:focus,
+.form-style-6 input[type="email"]:focus,
+.form-style-6 input[type="number"]:focus,
+.form-style-6 input[type="search"]:focus,
+.form-style-6 input[type="time"]:focus,
+.form-style-6 input[type="url"]:focus,
+.form-style-6 textarea:focus,
+.form-style-6 select:focus
+{
+	box-shadow: 0 0 5px #43D1AF;
+	padding: 3%;
+	border: 1px solid #43D1AF;
+}
+
+.form-style-6 input[type="submit"],
+.form-style-6 input[type="button"]{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 3%;
+	background: #43D1AF;
+	border-bottom: 2px solid #30C29E;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;	
+	color: #fff;
+}
+.form-style-6 input[type="submit"]:hover,
+.form-style-6 input[type="button"]:hover{
+	background: #2EBC99;
 }
 
