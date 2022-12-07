@@ -5,31 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="lietotajs_styles.css">
+    
     <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <div class="index-box-container">
-            <div class="logo">
-                <h1>IT atbalsts</h1>
-            </div>
-            <li>
-                <ul>Sakums</ul>
-                <ul>Cenu katalogs</ul>
-                <ul>Portfolio</ul>
-                <ul>Kontakti</ul>
-            </li>
-        </div>
-    </header>
 
     <?php
+    require("header.php");
+
     $page = "sakums";
 
     require("connect.php");
 
-    session_start();
+    
 
     if($_SESSION['username']) {
 

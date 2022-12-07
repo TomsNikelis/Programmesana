@@ -4,21 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/userLogin.css">
     <title>Login</title>
 </head>
-<body class="login_body">
-
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
-
-    <form method="post">
-        <h3>Pieslēgties</h3>
+<body>
 
         <?php
 
@@ -58,18 +47,24 @@
 
 				?>
 
-        <label for="username">Vards</label>
-        <input type="text" placeholder="Vards" id="username" name="vards">
-
-        <label for="password">Parole</label>
-        <input type="password" placeholder="Parole" id="password" name="parole">
-
-        <button name="autorizeties">Pieslēgties</button>
-        <div class="social">
-          <div class="go"><i class="fab fa-google"></i>  Google</div>
-          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+<div class="parent">
+            <h1>Pieslēgties</h1>
+            <form method="post">
+                <div class="textbox">
+                    <input type="text" required name="vards">
+                    <span></span>
+                    <label>Vārds</label>
+                </div>
+                <div class="textbox">
+                    <input type="password" required name="parole">
+                    <span></span>
+                    <label>Parole</label>
+                </div>
+                <input type="submit" value="Pieslēgties" name="autorizeties">
+                <div class="signupSec">
+                    Nēesi reģistrējies? <a href="userSignUp.php">Reģirstrēties</a>
+                </div>
+            </form>
         </div>
-    </form>
-    
 </body>
 </html>
