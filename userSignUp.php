@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html lang="lv">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-    <title>Login</title>
+    <link rel="stylesheet" href="css/userLogin.css">
+    <title>Reģistrēties</title>
 </head>
-<body class="login_body">
-
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
+<body>
     
 
 
@@ -26,7 +18,7 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         require ("connect.php");
 
-        if (isset($_POST['gatavs'])) {
+        if (isset($_POST['registreties'])) {
             $vards_ievade = $_POST['vards'];
             $uzvards_ievade = $_POST['uzvards'];
             $epasts_ievade = $_POST['epasts'];
@@ -50,6 +42,7 @@
 
                     if(mysqli_query($savienojums, $registret_lietotaju_SQL)) {
                         echo "<div class = 'pazinojums zals'>Apsveicu! Esat reģistrējies veiksmīgi!</div>";
+                        header('Refresh: 2; url=userLogin.php');
                     } else {
                         echo "<div class = 'pazinojums sarkans'>Radās kļūda! Reģistrācija neizdevās, kļūda sistēmā!</div>";
                     }
@@ -62,43 +55,52 @@
 
         }
     } else {
-        echo " <div class = 'pazinojums sarkans'> Kaut kas nogaja greizi, atgriezies 
-        sakuma lapa un meigini velreiz </div>";
-        #header("Refresh:2; url=index.php");
 
     }
 
     ?>
-        <form method="post">
-        <h3>Reģistrēties</h3>
 
-        <label for="username">Vārds</label>
-        <input type="text" placeholder="Vards" id="username" name="vards">
-
-        <label for="username">Uzvārds</label>
-        <input type="text" placeholder="Uzvards" id="username" name="uzvards">
-
-        <label for="password">Parole</label>
-        <input type="password" placeholder="Parole" id="password" name="parole">
-
-        <label for="password">Atkārtota parole</label>
-        <input type="password" placeholder="Atkartota parole" id="password" name="atkartota_parole">
-
-        <label for="username">Ē-pasts</label>
-        <input type="email" placeholder="e-pasts" id="username" name="epasts">
-
-        <label for="username">Telefons</label>
-        <input type="number" placeholder="Telefons" id="username" name="telefons">
-
-        <label for="username">Adrese</label>
-        <input type="text" placeholder="Adrese" id="username" name="adrese">
-
-        <input type="submit" name = "gatavs" value="Pieteikties!" class="btn">
-        <div class="social">
-          <div class="go"><i class="fab fa-google"></i>  Google</div>
-          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+<div class="parent">
+            <h1>Reģistrēties</h1>
+            <form method="post">
+                <div class="textbox">
+                    <input type="text" required name="vards">
+                    <span></span>
+                    <label>Vārds</label>
+                </div>
+                <div class="textbox">
+                    <input type="text" required name="uzvards">
+                    <span></span>
+                    <label>Uzvārds</label>
+                </div>
+                <div class="textbox">
+                    <input type="text" required name="epasts">
+                    <span></span>
+                    <label>Ē-pasts</label>
+                </div>
+                <div class="textbox">
+                    <input type="password" required name="parole">
+                    <span></span>
+                    <label>Parole</label>
+                </div>
+                <div class="textbox">
+                    <input type="password" required name="atkartota_parole">
+                    <span></span>
+                    <label>Atkārtota parole</label>
+                </div>
+                <div class="textbox">
+                    <input type="number" required name="telefons">
+                    <span></span>
+                    <label>Telefona numurs</label>
+                </div>
+                <div class="textbox">
+                    <input type="text" required name="adrese">
+                    <span></span>
+                    <label>Faktiskā adrese</label>
+                </div>
+                <input type="submit" value="Reģistrēties" name="registreties">
+            </form>
         </div>
-    </form>
 
 </body>
 </html>
