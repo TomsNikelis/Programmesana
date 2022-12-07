@@ -145,7 +145,7 @@
 
     } else {
         echo "<section><div id = 'aizliegts'><h2>Tev nav peejas</h2></div></section>";
-        header('Refresh: 20; url=index.php');
+        header('Refresh: 0; url=index.php');
     }
 
 ?>

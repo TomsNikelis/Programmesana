@@ -8,7 +8,7 @@
         <title>Music App</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="testing.css">
+        <link rel="stylesheet" href="headerStyle.css">
 
 
     </head>
@@ -33,11 +33,9 @@
 
                 <ul>
                     <li><a href="index.php">Sākums</a></li>
-                    <li><a href="#">Par mums</a></li>
                     <li><a href="#">Kontakti</a></li>
                     <li><a href="#"><?php echo $_SESSION['username']; ?></a></li>
-                   <button><li><a href="lietotajs.php">Profils</a></li>  </button>      
-        
+                   <button class="poga"><li><a href="logout.php">Logout</a></li>  </button>     
                 </ul>
             </div>
         </div>
@@ -69,10 +67,9 @@
 
         <ul>
             <li><a href="index.php">Sākums</a></li>
-            <li><a href="#">Par mums</a></li>
             <li><a href="#">Kontakti</a></li>
             <li><a href="userLogin.php">Pieslēgties</a></li>
-           <button><li><a href="lietotajs.php">Profils</a></li>  </button>      
+           <button><li><a href="lietotajs.php">Reģistrēties</a></li>  </button>      
 
         </ul>
     </div>
