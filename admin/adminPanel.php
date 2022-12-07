@@ -8,8 +8,16 @@
     <title>Document</title>
 </head>
 <body>
+
+<?php
+session_start();
+if ($_SESSION['admin_username']) {
+
+
+?>
+
     <header>
-        <h3>Sveicināts Administrators</h3>
+        <h3>Sveicināts <?php echo $_SESSION['admin_username']; ?>!</h3>
         <hr>
     </header>
 
@@ -78,5 +86,11 @@
     
 
     </section>
+
+    <?php
+} else {
+    header('Refresh: 0; url=adminLogin.php');
+}
+    ?>
 </body>
 </html>
