@@ -43,19 +43,36 @@ if ($_SESSION['admin_username']) {
     <h1>Neizdarītās problēmas</h1>
 
     <section>
+    <?php
 
-        <div class="parent">
 
-            <div class="box1">
-                <h4>Toma Problēma:</h4>
+    require("../connect.php");
+            $problemaSQL = "SELECT lietotajs.vards,
+            lietotajs.lietotajs_id, problema.apraksts, problema.problema_id, problema.status
+             FROM problema
+             INNER JOIN lietotajs ON lietotajs.lietotajs_id = problema.id_lietotajs
+             WHERE problema.status = 'Nav pabeigts'";
+            $atlasaProblemas = mysqli_query($savienojums, 
+            $problemaSQL) or die("Nekorekts vaicajums!");
+
+            if(mysqli_num_rows($atlasaProblemas) > 0) {
+                while ($row = mysqli_fetch_assoc
+                ($atlasaProblemas)) {
+                    echo "
+
+
+
+                    <div class='parent'>
+
+            <div class='box1'>
+                <h4>{$row['vards']} Problēma:</h4>
             </div>
-            <div class="box1">
-                <h4>Nestrādā anti-virus,
-                    vajadzīga datora apkope un iztīrīšana
+            <div class='box1'>
+                <h4>{$row['apraksts']} 
                 </h4>
             </div>
 
-            <div class="box1">
+            <div class='box1'>
                 <button>Izpildīts</button>
             </div>
 
@@ -64,25 +81,16 @@ if ($_SESSION['admin_username']) {
         </div>
 
         <hr>
+            ";
+                }
+            } else {
+                echo "Datusbaze nav ievietota neviena specialitate!";
+            }
+        
+        
+        ?>
 
-        <div class="parent">
 
-            <div class="box1">
-                <h4>Toma Problēma:</h4>
-            </div>
-            <div class="box1">
-                <h4>Nestrādā anti-virus,
-                    vajadzīga datora apkope un iztīrīšana
-                </h4>
-            </div>
-
-            <div class="box1">
-                <button>Izpildīts</button>
-            </div>
-
-        </div>
-
-        <hr>
     
 
     </section>
