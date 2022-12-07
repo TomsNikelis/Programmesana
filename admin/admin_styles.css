@@ -18,7 +18,7 @@
     border:none;
     text-decoration: none;
     transition: all .3s ease-out;
-    background-color: darkblue;
+    background-color: #6A8A82;
 }
 
 *::selection{
