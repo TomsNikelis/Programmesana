@@ -25,7 +25,7 @@ ORDER BY count(atvalinajumi_id) DESC;
 /*Trešais view vaicājums, attēlos informāciju kurā tiks parādītas tās problēmas, kurās vēl nav tikušas izdarītas ar statusu: 'Nav pabeigts'.
 Kā arī tiks parādīts lietotājs, kurš iesniedzis šo problēmu un darbinieks, kam šī problēma ir jāizdara un abu kontaktinfromācija.*/
 
-CREATE VIEW Atvalinajumu_skaits AS
+CREATE VIEW Neizdaritas_problemas AS
 
 SELECT darbinieki.uzvards AS 'Darbinieka uzvārds', darbinieki.telefons AS 'Darbinieka telefons', lietotajs.uzvards AS 'Problēmas iesniedzējs', lietotajs.telefons AS 'Problēmas sniedzēja telefons', problema.apraksts, problema.status
 FROM darbinieki

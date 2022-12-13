@@ -14,6 +14,7 @@ $page = "panelis";
 
 <?php
 session_start();
+require("../connect.php");
 if ($_SESSION['admin_username']) {
 
 
@@ -26,6 +27,18 @@ if ($_SESSION['admin_username']) {
 
     <section>
 
+    <?php
+    $klientu_skaitsSQL = "SELECT * FROM klientu_skaits";  
+    $atrisinatas_problemasSQL = "SELECT * FROM atrisinatas_problemas";
+    $problemu_skaitSQL = "SELECT * FROM problemu_skaits";
+    $darbinieku_skaitsSQL = "SELECT * FROM darbinieku_skaits";
+
+    $klientu_skaits = mysqli_query($savienojums, $klientu_skaitsSQL);
+    $atrisinatas_problemas = mysqli_query($savienojums, $atrisinatas_problemasSQL);
+    $problemu_skaits = mysqli_query($savienojums, $problemu_skaitSQL);
+    $darbinieku_skaits = mysqli_query($savienojums, $darbinieku_skaitsSQL);
+    ?>
+
         </div>
         <div class="box">
             <h4>Reģistrējušies klienti</h4>
@@ -34,10 +47,41 @@ if ($_SESSION['admin_username']) {
             <h4>Darbinieki</h4>
         </div>
         <div class="box">
-            <h3>100</h4>
-            <h3>50</h4>
-            <h3>23</h4>
-            <h3>5</h4>
+
+        <?php  
+                          while($row = mysqli_fetch_array($klientu_skaits))  
+                          {  
+                            echo "<h3>{$row['skaits']}</h4>";
+                          ?>  
+                          <?php  
+                          }
+                          while($row = mysqli_fetch_array($atrisinatas_problemas))  
+                          {  
+                            echo "<h3>{$row['skaits']}</h4>";
+                          ?>  
+                          <?php  
+                          }
+                          while($row = mysqli_fetch_array($problemu_skaits))  
+                          {  
+                            echo "<h3>{$row['skaits']}</h4>";
+                          ?>  
+                          <?php  
+                          }
+                          while($row = mysqli_fetch_array($darbinieku_skaits))  
+                          {  
+                            echo "<h3>{$row['skaits']}</h4>";
+                          ?>  
+                          <?php  
+                          }    
+                          ?>   
+                          
+                       
+                        
+
+
+            
+            
+
         </div>
     </section>
     
@@ -49,7 +93,7 @@ if ($_SESSION['admin_username']) {
     <?php
 
 
-    require("../connect.php");
+    
             $problemaSQL = "SELECT lietotajs.vards,
             lietotajs.lietotajs_id, problema.apraksts, problema.problema_id, problema.status
              FROM problema
