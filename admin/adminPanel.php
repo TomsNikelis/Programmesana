@@ -1,3 +1,6 @@
+<?php
+$page = "panelis";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,7 +63,7 @@ if ($_SESSION['admin_username']) {
                 ($atlasaProblemas)) {
                     echo "
 
-
+                    
 
                     <div class='parent'>
 
@@ -73,7 +76,10 @@ if ($_SESSION['admin_username']) {
             </div>
 
             <div class='box1'>
-                <button>Izpildīts</button>
+            <form action = 'finishProblem.php' method = 'post'>
+                <button tpye = 'submit' name = 'izpildit'>Izpildīts</button>
+                </form>
+                                            
             </div>
 
             
@@ -81,7 +87,10 @@ if ($_SESSION['admin_username']) {
         </div>
 
         <hr>
+
+        
             ";
+            $_SESSION["problemaID"] = $row["problema_id"];
                 }
             } else {
                 echo "Datusbaze nav ievietota neviena specialitate!";
