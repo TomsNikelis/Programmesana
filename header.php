@@ -34,15 +34,13 @@
                 <ul>
                     <li><a href="index.php">Sākums</a></li>
                     <li><a href="#">Kontakti</a></li>
-                    <li><a href="#"><?php echo $_SESSION['username']; ?></a></li>
+                    <li><a href="lietotajs.php"><?php echo $_SESSION['username']; ?></a></li>
                    <button class="poga"><li><a href="logout.php">Logout</a></li>  </button>     
                 </ul>
             </div>
         </div>
     
-    <section>
-        
-    </section>
+
 
 
     </body>

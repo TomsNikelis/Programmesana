@@ -20,7 +20,7 @@
 						$sqlVaicajums = "SELECT * FROM lietotajs WHERE vards = '$lietotaja_vards'";
 						$rezultats = mysqli_query($savienojums, $sqlVaicajums);
 
-                        echo "$parole";
+                       
 
 
 						if(mysqli_num_rows($rezultats) == 1) {
@@ -34,7 +34,7 @@
 								} 
 							}
 						} else {
-							echo "Nepareizs lietotaja vards vai parosssle!";
+							echo "Nepareizs lietotaja vards vai parole!";
 						}
 
 
