@@ -49,7 +49,6 @@ section{
     padding:2rem 9%;
 }
 
-/*Header un navbar izveide*/
 
 h3 {
     color: wheat;
@@ -115,4 +114,12 @@ button {
     font-size: 2rem;
     color: #A7414A;
     border: 0.3rem black solid;
+}
+
+h3.h3class:hover {
+    background-color: red;
+}
+
+h3:hover {
+    color: white;
 }

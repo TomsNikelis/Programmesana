@@ -13,5 +13,3 @@ if(!$savienojums) {
 } else {
     #echo "Savienojums ar datu bazi ir veiksmigi izveidots!";
 }
-
-?>
